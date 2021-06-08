@@ -62,7 +62,7 @@ public class Utilities {
         list.sort(comp1.thenComparing(comp2));
     }
     public static void sortBy(SortBy sortBy,SortBy sortBy1,SortBy sortBy2, List<ParkingSpot> list){
-    	Comparator<ParkingSpot> comp1 = null,comp2=null,comp3=null;
+    	Comparator<ParkingSpot> comp1=null,comp2=null,comp3=null;
         switch (sortBy){
             case AREA -> comp1 = ParkingSpot.byArea;
             case USER -> comp1 = ParkingSpot.byUser;
@@ -74,9 +74,9 @@ public class Utilities {
         	case NUMBER -> comp2 = ParkingSpot.byNumber;
         }
         switch (sortBy2){
-    	case AREA -> comp3 = ParkingSpot.byArea;
-    	case USER -> comp3 = ParkingSpot.byUser;
-    	case NUMBER -> comp3 = ParkingSpot.byNumber;
+    		case AREA -> comp3 = ParkingSpot.byArea;
+    		case USER -> comp3 = ParkingSpot.byUser;
+    		case NUMBER -> comp3 = ParkingSpot.byNumber;
     }
         list.sort(comp1.thenComparing(comp2).thenComparing(comp3));
     }
