@@ -16,6 +16,7 @@ public class Main{
             showResults("ParkSpotsSortedByArea.txt",SortBy.AREA,parkingSpots);//showing for every sorting type
             showResults("ParkSpotsSortedByUser.txt",SortBy.USER,parkingSpots);
             showResults("ParkSpotsSortedByNumber.txt",SortBy.NUMBER,parkingSpots);
+            showResults("ParkSpotsSortedByNumberAndArea.txt",SortBy.AREA,SortBy.NUMBER,parkingSpots);
         }catch (IOException error){
             error.printStackTrace();
         }

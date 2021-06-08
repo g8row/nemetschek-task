@@ -1,0 +1,12 @@
+Hello,
+
+as an attempt to show how serious i am about my path to becoming a programmer,
+I have worked on this project with git on Github.In recent days I have started using GIT, 
+so naturally i wanted to show off. Please visit my repository of the solution for this task.
+
+https://github.com/g8row/nemetschek-task/
+
+On my profile I also have another project, as i have recently started to build my portfolio, so 
+you can also visit it, it's not done in the slightest, but it shows my recent progress.
+
+Alexander
