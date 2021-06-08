@@ -3,9 +3,10 @@ package g8row;
 import java.io.*;
 import java.util.*;
 
+import static g8row.Utilities.*;
 
 
-public class Main extends Utilities {
+public class Main{
 
     public static void main(String[] args){
         List<ParkingSpot> parkingSpots = new ArrayList<>();// ArrayList gets the job done
