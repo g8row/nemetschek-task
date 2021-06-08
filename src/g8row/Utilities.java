@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,7 +34,7 @@ public class Utilities {
         }
     }
     /*
-     * Sorts the list by a selected method
+     * Sorts the list by a selected method, multiple methods for multiple attri
      */
     public static void sortBy(SortBy sortBy, List<ParkingSpot> list){
         switch (sortBy){
@@ -40,6 +42,39 @@ public class Utilities {
             case USER -> list.sort(ParkingSpot.byUser);
             case NUMBER -> list.sort(ParkingSpot.byNumber);
         }
+    }
+    public static void sortBy(SortBy sortBy,SortBy sortBy1, List<ParkingSpot> list){
+    	Comparator<ParkingSpot> comp1 = null,comp2=null;
+        switch (sortBy){
+            case AREA -> comp1 = ParkingSpot.byArea;
+            case USER -> comp1 = ParkingSpot.byUser;
+            case NUMBER -> comp1 = ParkingSpot.byNumber;
+        }
+        switch (sortBy1){
+        	case AREA -> comp2 = ParkingSpot.byArea;
+        	case USER -> comp2 = ParkingSpot.byUser;
+        	case NUMBER -> comp2 = ParkingSpot.byNumber;
+        }
+        list.sort(comp1.thenComparing(comp2));
+    }
+    public static void sortBy(SortBy sortBy,SortBy sortBy1,SortBy sortBy2, List<ParkingSpot> list){
+    	Comparator<ParkingSpot> comp1 = null,comp2=null,comp3=null;
+        switch (sortBy){
+            case AREA -> comp1 = ParkingSpot.byArea;
+            case USER -> comp1 = ParkingSpot.byUser;
+            case NUMBER -> comp1 = ParkingSpot.byNumber;
+        }
+        switch (sortBy1){
+        	case AREA -> comp2 = ParkingSpot.byArea;
+        	case USER -> comp2 = ParkingSpot.byUser;
+        	case NUMBER -> comp2 = ParkingSpot.byNumber;
+        }
+        switch (sortBy2){
+    	case AREA -> comp3 = ParkingSpot.byArea;
+    	case USER -> comp3 = ParkingSpot.byUser;
+    	case NUMBER -> comp3 = ParkingSpot.byNumber;
+    }
+        list.sort(comp1.thenComparing(comp2).thenComparing(comp3));
     }
     /*
      * Writes to a file, as to show the sorted array
